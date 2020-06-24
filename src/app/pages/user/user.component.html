@@ -1,0 +1,392 @@
+<style>
+
+@font-face {
+font-family: Dutch809 BT;
+src: url(assets/fonts/Dutch-809-BT_14830.ttf);
+font-weight: normal;
+}
+
+body {
+   font-family: Dutch809 BT !important;
+ 
+  }
+
+
+.main-panel {
+    /* background: url(index_files/bg.png); */
+    background-color: #fff !important;
+    background-image: url(assets/bg.png) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% !important;
+    background-attachment: fixed !important;
+}
+
+
+
+.card {
+    background: rgba(255,255,255,0.6) !important;
+    border: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 1px 20px 0px rgba(0, 0, 0, 0.1) !important;
+}
+
+body {
+    margin: 0 !important;
+    font-family:  Dutch809 BT !important ;
+    font-size: 0.875rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #525f7f !important;
+    text-align: left !important;
+    background-color: #fff !important;
+}
+body {
+    font-family: Dutch809 BT !important;
+}
+
+.card-header:first-child {
+    border-radius: 0px !important;
+}
+
+.card-header {
+    padding: 1.25rem 1.5rem !important;
+    margin-bottom: 0 !important;
+    background-color: rgba(182,156,106,0.5) !important; 
+    color:#fff !important;
+    border-bottom: 0.0625rem solid rgba(34, 42, 66, 0.05) !important;
+}
+
+.card .card-header .card-category {
+    color: #fff !important;
+    margin-bottom: px !important;
+    font-weight: 500; font-size:16px !important;
+}
+
+.card .card-header {
+    padding: 6px 15px 0 !important;
+    border: 0 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.card {
+
+    border-radius: 0 !important;
+}
+
+.cart-title {
+    color: #fff !important;
+
+    font-weight: 500; font-size:16px !important;
+}
+
+
+.card{
+    background: rgba(0,0,0,0.1) !important;
+    border: 0 !important;
+    position: relative !important;
+    width: 100% !important;
+    margin-bottom: 30px !important;
+    box-shadow: box-shadow !important ;
+    opacity:0.9 !important ;
+    
+    }
+    
+    .main-panel {
+    padding: 78px 10px 30px 10px;
+    min-height: calc(100vh - 70px);
+    font-family:  Dutch809 BT !important ;
+}
+
+</style>
+<div class="main-panel">
+  <div class=" row">
+    <div class=" col-md-3">
+      <div class=" card card-user">
+        <div class=" card-body">
+          <p class=" card-text"></p>
+          <div class=" author">
+            <div class=" block block-one"></div>
+            <div class=" block block-two"></div>
+            <div class=" block block-three"></div>
+            <div class=" block block-four"></div>
+            <a href="javascript:void(0)">
+              
+              <img alt="..." src="assets/delta_light.png" style="margin-bottom: 20px;">
+
+              <h5 class=" title">DLTA.ZW</h5>
+            </a>
+            <p class=" description">ZWL $</p>
+           <h2> <p class=" description">{{CompanyPrice.toFixed(4)}}</p></h2>
+          </div>
+          <div class="card-description" >
+            <center><h4 class="info-fifty-movement description"> {{ test | date: "EEEE MMMM d, yyyy" }}</h4></center>
+            <center> <span class="info-movement downi">{{CompanyPriceDif.toFixed(4)}} | {{CompanyPriceDifPecentage.toFixed(4) }} %</span> </center>
+            <center> <h4 class="info-fifty-movement description">52 Week Change:</h4></center>
+            <center> <span style="color:green" class="info-movement upi">314.79%</span></center>
+            </div>
+          
+        </div>
+        <div class=" card-footer">
+          <!--
+            <div class=" button-container">
+            <button
+              class=" btn btn-icon btn-round btn-facebook"
+              href="javascript:void(0)"
+            >
+              <i class=" fab fa-facebook"> </i>
+            </button>
+            <button
+              class=" btn btn-icon btn-round btn-twitter"
+              href="javascript:void(0)"
+            >
+              <i class=" fab fa-twitter"> </i>
+            </button>
+            <button
+              class=" btn btn-icon btn-round btn-google"
+              href="javascript:void(0)"
+            >
+              <i class=" fab fa-google-plus"> </i>
+            </button>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <div class=" col-md-9">
+      <div class=" card">
+        <div class="card-header">
+          <h5 class="title" style="font-size:16px; font-weight:500;">OVERVIEW OF OUR SHARE PRICE PERFORMANCE</h5>
+        </div>
+        <div class=" card-body">
+          <div class=" row">
+            <div class=" col-lg-4">
+              <div class=" card card-chart">
+                <div class=" card-header">
+                  <h5 class=" card-category">Activity {{ test | date: "EEEE MMMM d, yyyy" }}</h5>
+                  <!--<h3 class=" card-title">
+                    <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+                  </h3>-->
+                </div>
+                <div class=" card-body">
+                  <div class="fusion-text"><section><table class=" table tablesorter"><tbody class=" text-primary"><tr><th>Closing Price </th><td class="numeric">ZWL $ {{ClossingCampanyPrice.toFixed(4)}}</td></tr><tr><th>Value</th><td class="numeric">ZWL$ {{PriceTurnover.toFixed(4)}}</td></tr><tr><th>Volume</th><td class="numeric">{{PriceVolume}}</td></tr><tr><th>Market Cap</th><td class="numeric">ZWL$ 15,427,646,676.85</td></tr><tr><th>Shares issued</th><td class="numeric">1,284,481,190</td></tr></tbody></table></section></div>
+                <div hidden class=" chart-area"><canvas id="chartLineRed" hidden> </canvas></div>
+                </div>
+              </div>
+            </div>
+            <div class=" col-lg-4">
+              <div class=" card card-chart">
+                <div class=" card-header">
+                  <h5 class=" card-category">Performance</h5>
+                  <!--<h3 class=" card-title">
+                    <i class=" tim-icons icon-delivery-fast text-info"> </i> 3,500€
+                  </h3>-->
+                </div>
+                <div class=" card-body">
+                  <div class="fusion-text">
+                    <section>
+                      <table class=" table tablesorter">
+                        <tbody class=" text-primary" >
+                          <tr><th>Today</th><td class="numeric"><span  style="color:green" class="info-movement downi">{{CompanyPriceDif.toFixed(4)}} | {{CompanyPriceDifPecentage.toFixed(4) }} %</span></td></tr><tr><th>52 week high</th><td class="numeric">ZWL 865.98</td></tr><tr><th>52 week low</th><td class="numeric">ZWL 225.00</td></tr><tr><th>52 week change</th><td class="numeric"><span style="color:green" class="info-movement upi">314.79%</span></td></tr><tr><th>Year to date</th><td class="numeric"><span  class="info-movement upi">247.40%</span></td></tr></tbody></table></section></div>
+                 <div hidden class=" chart-area"><canvas id="CountryChart" hidden> </canvas></div>
+                </div>
+              </div>
+            </div>
+            <div class=" col-lg-4">
+              <div class=" card card-chart">
+                <div class=" card-header">
+                  <h5 class=" card-category">market Info</h5>
+                  <!--<h3 class=" card-title">
+                    <i class=" tim-icons icon-send text-success"> </i> 12,100K
+                  </h3>-->
+                </div>
+                <div class=" card-body">
+                  <section><table class="table tablesorter">
+                    <tbody class=" text-primary"><tr><th>Currency</th><td class="numeric">ZWL $</td></tr><tr><th>Founded</th><td class="numeric">1898</td></tr><tr><th>Listed</th><td class="numeric">1st January, 1946</td></tr><tr><th>Year end</th><td class="numeric">March</td></tr><tr><th>Index</th><td class="numeric">Zimbabwe Industrial Index (XZWIND.zw)</td></tr></tbody></table></section>
+                  <div hidden class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-footer">
+          <!--<button class=" btn btn-fill btn-danger" type="submit">Save</button>-->
+        </div><!---->
+      </div>
+    </div>
+    
+  </div> <div class=" row">
+   
+    <div class=" col-lg-8">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Daily Update</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-delivery-fast text-info"> </i>
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area">
+           
+            <table id="dataTable" class=" table tablesorter" style="width:100%">
+              <thead>
+              <tr>
+                <th class="numeric">Date</th>
+                <th class="numeric">Closing Price</th>
+                <th class="numeric">Volume</th>
+              </tr>
+            </thead>
+              <tbody class=" text-primary">
+                <tr *ngFor="let item of ItemsArrayDate">
+                  <td>{{ item.date  }}</td>
+                  <td>{{ item.value }}</td>
+                  <td>{{ item.change   }}</td>
+                 
+               </tr>
+              </tbody>
+              <tfoot>
+              <tr>
+                <th class="numeric">Date</th>
+                <th class="numeric">Closing Price</th>
+                <th class="numeric">Volume</th>
+              </tr>
+              </tfoot>
+            </table>
+
+
+
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-4">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Daily Update(Graph)</h5>
+          <h3 class=" card-title">
+            <i class=" tim-icons icon-send text-success"> </i>
+          </h3>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartLineGreenLine"> </canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class=" row">
+    <div class=" col-9">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h5 class=" card-category"></h5>
+              <h2 class=" card-title">Performance</h2>
+            </div>
+            <div class=" col-sm-6">
+              <div
+                class=" btn-group btn-group-toggle float-right"
+                data-toggle="buttons"
+              >
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
+                  <input checked="checked" name="options" type="radio" />
+
+                  <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                    Share Chart
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-single-02"> </i>
+                  </span>
+                </label>
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
+                  <input
+                    class=" d-none d-sm-none"
+                    name="options"
+                    type="radio"
+                  />
+
+                  <span
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  >
+                    Financial Summary
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-gift-2"> </i>
+                  </span>
+                </label>
+                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
+                  <input class=" d-none" name="options" type="radio" />
+
+                  <span
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  >
+                    Event Calendar
+                  </span>
+                  <span class=" d-block d-sm-none">
+                    <i class=" tim-icons icon-tap-02"> </i>
+                  </span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" card-body">
+          <div class=" chart-area"><canvas id="chartBig_me"> </canvas></div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Shares</h5>
+          <!--<h3 class=" card-title">
+            <i class=" tim-icons icon-send text-success"> </i> 12,100K
+          </h3>-->
+        </div>
+        <div class=" card-body">
+          <!--<section><table class="table tablesorter"><tbody class=" text-primary"><tr><th>Currency</th><td class="numeric">ZWL cents</td></tr><tr><th>Founded</th><td class="numeric">1898</td></tr><tr><th>Listed</th><td class="numeric">1st January, 1946</td></tr><tr><th>Year end</th><td class="numeric">March</td></tr><tr><th>Index</th><td class="numeric">Zimbabwe Industrial Index (XZWIND.zw)</td></tr></tbody></table></section>-->
+          <div  class=" chart-area"><canvas id="chartLineGreen_me"> </canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <div class=" row">
+    <div class=" col-9">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <div class=" row">
+            <div class=" col-sm-6 text-left">
+              <h5 class=" card-category"></h5>
+              <h2 class=" card-title">Profile</h2>
+            </div>
+            <div class=" col-sm-6">
+              </div>
+          </div>
+        </div>
+        <div class=" card-body">
+          <div class=" typography-line">
+            <p  >
+            Delta Corporation Limited manufacturers and markets international and locally-produced beverages in Zimbabwe. It operates in four segments: non-alcoholic beverages, sparkling beverages, lager beers and traditional beers. Brands in its non-alcoholic range are a flavoured maize drink called Shumba Maheu, and a flavoured drinking yoghurt called Supersip Yogurt. The sparkling beverages division operates two bottling plants and one canning plant; bottling and distributing popular cool drink brands sold worldwide by the Coca-Cola Company, a range of drink mixes and an energy drink called Burn. The lager beer division operates two breweries; bottling and distributing international brands such as Castle Lite, Miller’s, Peroni, Redds, Brutal Fruit and Sarita. Delta Corporation Limited has a monopoly in the traditional beer market in Zimbabwe with 14 breweries located across the country; brewing and distributing a well-known sorghum beer brand called Chibuku. Other subsidiaries have interests in transport and logistics, barley and sorghum malting, food processing, packaging, retailing wines and spirits, recycling, tin can production and leadership training. Delta Corporation Limited is listed on the Zimbabwe Stock Exchange
+            </p>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class=" col-lg-3">
+      <div class=" card card-chart">
+        <div class=" card-header">
+          <h5 class=" card-category">Fundamentals</h5>
+          <!--<h3 class=" card-title">
+            <i class=" tim-icons icon-send text-success"> </i> 12,100K
+          </h3>-->
+        </div>
+        <div class=" card-body">
+          <section>
+            <table class="table tablesorter"><tbody class=" text-primary"><tr><th>P/E</th><td class="numeric">{{Price_Earnings_Ratio.toFixed(2)}}</td></tr><tr><th>Div. yield</th><td class="numeric">{{Dividend_Yield.toFixed(4)}}</td></tr><tr><th>EPS</th><td class="numeric">{{Earnings_Per_Share.toFixed(4)}}</td></tr><tr><th>P/B ratio</th><td class="numeric">{{PB_Ratio.toFixed(4)}}</td></tr><tr><th>EV / EBITDA</th><td class="numeric">{{EV_EBITDA.toFixed(2)}}</td></tr></tbody></table>
+              </section>
+              <!--<div  class=" chart-area"><canvas id="chartLineGreen_me"> </canvas></div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+ @font-face {
+font-family: New Font;
+src: url(./fonts/Dutch-809-BT_14830.ttf);
+font-weight: normal;
+}
+
+body {
+   font-family: Dutch809 BT;
+ 
+    }
+.card{
+    background: rgba(0,0,0,0.1);
+    border: 0;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: $box-shadow;opacityx:0.9;
+
+
+    label{
+      color: rgba($white, 0.6);
+    }
+
+    .card-title {
+      margin-bottom: .75rem;
+    }
+
+    .card-body{
+      padding: 15px;
+
+      &.table-full-width{
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .card-title{
+        color: $white;
+        text-transform: inherit;
+        font-weight: $font-weight-light;
+        margin-bottom: .75rem;
+      }
+
+      .card-description, .card-category{
+        color: rgba($white, 0.6);
+      }
+
+    }
