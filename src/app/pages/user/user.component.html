@@ -383,7 +383,7 @@ body {
                     <i class=" tim-icons icon-single-02"> </i>
                   </span>
                 </label>
-                <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
+               <!--  <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[1];updateOptions();clicked=false;clicked1=true;clicked2=false" [ngClass]="{'active':clicked1===true}">
                   <input
                     class=" d-none d-sm-none"
                     name="options"
@@ -399,7 +399,7 @@ body {
                   <span class=" d-block d-sm-none">
                     <i class=" tim-icons icon-gift-2"> </i>
                   </span>
-                </label>
+                </label> -->
                 <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[2];updateOptions();clicked=false;clicked1=false;clicked2=true" [ngClass]="{'active':clicked2===true}">
                   <input class=" d-none" name="options" type="radio" />
 
@@ -418,7 +418,8 @@ body {
           </div>
         </div>
         <div class=" card-body">
-          <div class=" chart-area"><canvas id="chartBig_me"> </canvas></div>
+          <div  class=" chart-area"><canvas id="chartBig_me"> </canvas></div>
+          <!--<div *ngIf="Hide" class=" chart-area"><canvas id="chartBig_mei"> </canvas></div>-->
         </div>
       </div>
     </div>

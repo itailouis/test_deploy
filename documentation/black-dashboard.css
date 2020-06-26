@@ -2565,7 +2565,7 @@ fieldset:disabled a.btn {
 .btn-danger:hover {
   color: #ffffff;
   background-color: #fd377a;
-  border-color: #fc2b71;
+  border-color: #b69c6a ;
 }
 
 .btn-danger:focus,
@@ -2584,7 +2584,7 @@ fieldset:disabled a.btn {
 .btn-danger:not(:disabled):not(.disabled).active,
 .show>.btn-danger.dropdown-toggle {
   color: #ffffff;
-  background-color: #fc2b71;
+  background-color: #b69c6a ;
   border-color: #fc1e69;
 }
 
@@ -5217,7 +5217,7 @@ input[type="button"].btn-block {
 .badge-danger[href]:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: #fc2b71;
+  background-color: #b69c6a ;
 }
 
 .badge-light {
@@ -5420,7 +5420,7 @@ input[type="button"].btn-block {
 }
 
 .alert-danger .alert-link {
-  color: #fc2b71;
+  color: #b69c6a ;
 }
 
 .alert-light {
@@ -6666,7 +6666,7 @@ a.bg-danger:hover,
 a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
-  background-color: #fc2b71 !important;
+  background-color: #b69c6a  !important;
 }
 
 .bg-light {

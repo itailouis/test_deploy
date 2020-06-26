@@ -21,6 +21,10 @@ export class UserComponent implements OnInit {
   public clicked: boolean = true;
   public clicked1: boolean = false;
   public clicked2: boolean = false;
+
+  public show: boolean = false;
+  public buttonName:any = 'Show';
+
   public barCount = 60;
   public initialDateStr = '01 Apr 201 00:00 Z';
   public  ItemsArray=[];
@@ -985,7 +989,18 @@ setTimeout(function() {
   }
   
   
+  public updateOptions() {
+    this.myChartData.data.datasets[0].data = this.data;
+    this.myChartData.update();
+    this.show = !this.show;
 
+    // CHANGE THE NAME OF THE BUTTON.
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Show";
+
+  }
 
 
 
