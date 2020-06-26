@@ -99,6 +99,10 @@ body {
     font-family:  Dutch809 BT !important ;
 }
 
+.corp_color{
+  color:#b69c6a;
+}
+
 </style>
 <div class="main-panel">
   <div class=" row">
@@ -169,7 +173,7 @@ body {
                   </h3>-->
                 </div>
                 <div class=" card-body">
-                  <div class="fusion-text"><section><table class=" table tablesorter"><tbody class=" text-primary"><tr><th>Closing Price </th><td class="numeric">ZWL $ {{ClossingCampanyPrice.toFixed(4)}}</td></tr><tr><th>Value</th><td class="numeric">ZWL$ {{PriceTurnover.toFixed(4)}}</td></tr><tr><th>Volume</th><td class="numeric">{{PriceVolume}}</td></tr><tr><th>Market Cap</th><td class="numeric">ZWL$ 15,427,646,676.85</td></tr><tr><th>Shares issued</th><td class="numeric">1,284,481,190</td></tr></tbody></table></section></div>
+                  <div class="fusion-text"><section><table class=" table tablesorter"><tbody class=" text-primary"><tr><th class="corp_color">Closing Price </th><td class="numeric">ZWL $ {{ClossingCampanyPrice.toFixed(4)}}</td></tr><tr><th class="corp_color">Value</th><td class="numeric">ZWL$ {{PriceTurnover.toFixed(4)}}</td></tr><tr><th class="corp_color">Volume</th><td class="numeric">{{PriceVolume}}</td></tr><tr><th class="corp_color">Market Cap</th><td class="numeric">ZWL$ 15,427,646,676.85</td></tr><tr><th class="corp_color">Shares issued</th><td class="numeric">1,284,481,190</td></tr></tbody></table></section></div>
                 <div hidden class=" chart-area"><canvas id="chartLineRed" hidden> </canvas></div>
                 </div>
               </div>
@@ -187,7 +191,7 @@ body {
                     <section>
                       <table class=" table tablesorter">
                         <tbody class=" text-primary" >
-                          <tr><th>Today</th><td class="numeric"><span  style="color:green" class="info-movement downi">{{CompanyPriceDif.toFixed(4)}} | {{CompanyPriceDifPecentage.toFixed(4) }} %</span></td></tr><tr><th>52 week high</th><td class="numeric">ZWL 865.98</td></tr><tr><th>52 week low</th><td class="numeric">ZWL 225.00</td></tr><tr><th>52 week change</th><td class="numeric"><span style="color:green" class="info-movement upi">314.79%</span></td></tr><tr><th>Year to date</th><td class="numeric"><span  class="info-movement upi">247.40%</span></td></tr></tbody></table></section></div>
+                          <tr><th class="corp_color">Today</th><td class="numeric"><span  style="color:green" class="info-movement downi">{{CompanyPriceDif.toFixed(4)}} | {{CompanyPriceDifPecentage.toFixed(4) }} %</span></td></tr><tr><th class="corp_color">52 week high</th><td class="numeric">ZWL 865.98</td></tr><tr><th class="corp_color">52 week low</th><td class="numeric">ZWL 225.00</td></tr><tr><th class="corp_color">52 week change</th><td class="numeric"><span style="color:green" class="info-movement upi">314.79%</span></td></tr><tr><th class="corp_color">Year to date</th><td class="numeric"><span  class="info-movement upi">247.40%</span></td></tr></tbody></table></section></div>
                  <div hidden class=" chart-area"><canvas id="CountryChart" hidden> </canvas></div>
                 </div>
               </div>
@@ -202,7 +206,7 @@ body {
                 </div>
                 <div class=" card-body">
                   <section><table class="table tablesorter">
-                    <tbody class=" text-primary"><tr><th>Currency</th><td class="numeric">ZWL $</td></tr><tr><th>Founded</th><td class="numeric">1898</td></tr><tr><th>Listed</th><td class="numeric">1st January, 1946</td></tr><tr><th>Year end</th><td class="numeric">March</td></tr><tr><th>Index</th><td class="numeric">Zimbabwe Industrial Index (XZWIND.zw)</td></tr></tbody></table></section>
+                    <tbody class=" text-primary"><tr><th class="corp_color">Currency</th><td class="numeric">ZWL $</td></tr><tr><th class="corp_color">Founded</th><td class="numeric">1898</td></tr><tr><th class="corp_color">Listed</th><td class="numeric">1st January, 1946</td></tr><tr><th class="corp_color">Year end</th><td class="numeric">March</td></tr><tr><th class="corp_color">Index</th><td class="numeric">Zimbabwe Industrial Index (XZWIND.zw)</td></tr></tbody></table></section>
                   <div hidden class=" chart-area"><canvas id="chartLineGreen"> </canvas></div>
                 </div>
               </div>
@@ -284,13 +288,14 @@ body {
             </div>
             <div class=" col-sm-6">
               <div
-                class=" btn-group btn-group-toggle float-right"
+              style="border-color:#b69c6a;"
+                class=" btn-group btn-group-toggle float-right "
                 data-toggle="buttons"
               >
                 <label class=" btn btn-sm btn-danger btn-simple" (click)="data=datasets[0];updateOptions();clicked=true;clicked1=false;clicked2=false" [ngClass]="{'active':clicked===true}">
                   <input checked="checked" name="options" type="radio" />
 
-                  <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                  <span class=" d-none d-sm-block d-md-block d-lg-block d-xl-block corp_color">
                     Share Chart
                   </span>
                   <span class=" d-block d-sm-none">
@@ -305,7 +310,8 @@ body {
                   />
 
                   <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                  
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block corp_color"
                   >
                     Financial Summary
                   </span>
@@ -317,7 +323,8 @@ body {
                   <input class=" d-none" name="options" type="radio" />
 
                   <span
-                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block"
+                 
+                    class=" d-none d-sm-block d-md-block d-lg-block d-xl-block corp_color"
                   >
                     Event Calendar
                   </span>
@@ -382,7 +389,7 @@ body {
         </div>
         <div class=" card-body">
           <section>
-            <table class="table tablesorter"><tbody class=" text-primary"><tr><th>P/E</th><td class="numeric">{{Price_Earnings_Ratio.toFixed(2)}}</td></tr><tr><th>Div. yield</th><td class="numeric">{{Dividend_Yield.toFixed(4)}}</td></tr><tr><th>EPS</th><td class="numeric">{{Earnings_Per_Share.toFixed(4)}}</td></tr><tr><th>P/B ratio</th><td class="numeric">{{PB_Ratio.toFixed(4)}}</td></tr><tr><th>EV / EBITDA</th><td class="numeric">{{EV_EBITDA.toFixed(2)}}</td></tr></tbody></table>
+            <table class="table tablesorter"><tbody class=" text-primary"><tr><th class="corp_color">P/E</th><td class="numeric">{{Price_Earnings_Ratio.toFixed(2)}}</td></tr><tr><th class="corp_color">Div. yield</th><td class="numeric">{{Dividend_Yield.toFixed(4)}}</td></tr><tr><th class="corp_color">EPS</th><td class="numeric">{{Earnings_Per_Share.toFixed(4)}}</td></tr><tr><th class="corp_color">P/B ratio</th><td class="numeric">{{PB_Ratio.toFixed(4)}}</td></tr><tr><th class="corp_color">EV / EBITDA</th><td class="numeric">{{EV_EBITDA.toFixed(2)}}</td></tr></tbody></table>
               </section>
               <!--<div  class=" chart-area"><canvas id="chartLineGreen_me"> </canvas></div>-->
         </div>

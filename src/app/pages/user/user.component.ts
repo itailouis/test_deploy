@@ -659,11 +659,13 @@ setTimeout(function() {
 
 
      this.CompanyPriceDif = (parseFloat(arryQuates[arryQuates.length-1][1])-parseFloat(arryQuates[arryQuates.length-2][1]));
+
      
 
     
      console.log((this.CompanyPrice-this.CompanyPriceDif));
-     this.CompanyPriceDifPecentage =  ((this.CompanyPrice-this.CompanyPriceDif)/this.CompanyPrice) * 100
+     //this.CompanyPriceDifPecentage =  ((//.CompanyPrice-this.CompanyPriceDif)/this.CompanyPriceDif) * 100
+     this.CompanyPriceDifPecentage =  this.CompanyPriceDif/parseFloat(arryQuates[arryQuates.length-2][1]) * 100
 
       
 
