@@ -11,6 +11,22 @@ body {
  
   }
 
+  .card-user .author .block.block-three {
+  background: rgba(182,156,106, 0.6);
+  background: -webkit-linear-gradient(to right, rgba(182,156,106, 0.6) 0%, rgba(182,156,106, 0) 100%);
+  background: -o-linear-gradient(to right, rgba(182,156,106, 0.6) 0%, rgba(182,156,106, 0) 100%);
+  background: -moz-linear-gradient(to right, rgba(182,156,106, 0.6) 0%, rgba(182,156,106, 0) 100%);
+  background: linear-gradient(to right, rgba(182,156,106, 0.6) 0%, rgba(182,156,106, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=10);
+  -webkit-transform: rotate(170deg);
+  -moz-transform: rotate(170deg);
+  -ms-transform: rotate(170deg);
+  -o-transform: rotate(170deg);
+  transform: rotate(170deg);
+  margin-top: -70px;
+  right: -45px;
+}
+
 
 .main-panel {
     /* background: url(index_files/bg.png); */
@@ -173,7 +189,7 @@ body {
                   </h3>-->
                 </div>
                 <div class=" card-body">
-                  <div class="fusion-text"><section><table class=" table tablesorter"><tbody class=" text-primary"><tr><th class="corp_color">Closing Price </th><td class="numeric">ZWL $ {{ClossingCampanyPrice.toFixed(4)}}</td></tr><tr><th class="corp_color">Value</th><td class="numeric">ZWL$ {{PriceTurnover.toFixed(4)}}</td></tr><tr><th class="corp_color">Volume</th><td class="numeric">{{PriceVolume}}</td></tr><tr><th class="corp_color">Market Cap</th><td class="numeric">ZWL$ 15,427,646,676.85</td></tr><tr><th class="corp_color">Shares issued</th><td class="numeric">1,284,481,190</td></tr></tbody></table></section></div>
+                  <div class="fusion-text"><section><table class=" table tablesorter"><tbody class=" text-primary"><tr><th class="corp_color">Closing Price </th><td class="numeric">ZWL $ {{ClossingCampanyPrice.toFixed(4)}}</td></tr><tr><th class="corp_color">Value</th><td class="numeric">ZWL$ {{PriceTurnover.toFixed(4)  | number: '.2'}}</td></tr><tr><th class="corp_color">Volume</th><td class="numeric">{{PriceVolume  | number: '.2'}}</td></tr><tr><th class="corp_color">Market Cap</th><td class="numeric">ZWL$ 15,427,646,676.85</td></tr><tr><th class="corp_color">Shares issued</th><td class="numeric">1,284,481,190</td></tr></tbody></table></section></div>
                 <div hidden class=" chart-area"><canvas id="chartLineRed" hidden> </canvas></div>
                 </div>
               </div>

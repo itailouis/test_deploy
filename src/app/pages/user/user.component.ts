@@ -142,6 +142,8 @@ export class UserComponent implements OnInit {
   this.PriceTurnover=0
 
 
+   
+
   
 
 
